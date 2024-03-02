@@ -1,0 +1,9 @@
+.login-popup{
+    height: 80%;
+    background-image: url(https://img.freepik.com/free-photo/computer-security-with-login-password-padlock_107791-16191.jpg?w=826&t=st=1705429397~exp=1705429997~hmac=a80a97e4006edeface1a7ae82c5a8d24b55bf6c99a17372b3004e22314c5784a);
+    background-repeat:no-repeat;    
+}
+.centered-div{
+    display: inline-block;
+    text-align: left;
+}

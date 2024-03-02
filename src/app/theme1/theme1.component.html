@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <title>Document</title>
+</head>
+<body id="contentToDownload" #contentToDownload>
+    <form #myForm="ngForm" novalidate (ngSubmit)="resumeData(myForm)">
+        <div class="page">
+            <div class="rela-block top-bar">
+                <div class="caps name" style="background-color: #848484;">
+                    <div class="abs-center">
+                    <input name="name" class="bg-noclr name-input" placeholder="Type Your Full Name" [(ngModel)]="FullName">
+                    </div>
+                </div>
+            </div>
+            <div class="side-bar">
+                <div class="mugshot">
+                    <div class="logo">
+                        <p class="logo-text">Personal Details</p>
+                    </div>
+                </div>
+                <input class="personal-details" type="text" name="Address" id="Address" placeholder="Enter Address" title="Address" [(ngModel)]="Address">
+                <input class="personal-details" type="text" name="Place" id="Place" placeholder="Enter Place" title="Place" [(ngModel)]="Place">
+                <input class="personal-details" type="text" name="Phone" id="Phone" placeholder="Enter Phone" title="Phone" [(ngModel)]="Phone">
+                <input class="personal-details" type="text" name="email" id="email" placeholder="Enter E-mail" title="email" [(ngModel)]="email">
+                <br>
+                <br>
+                <p class="rela-block social twitter"><input class="personal-details" name="twitterurl" type="text" id="twitterurl" placeholder="Enter twitter URL" title="twitter" [(ngModel)]="twitterurl"></p>
+                <p class="rela-block social linked-in"><input class="personal-details" type="text" name="linkedinurl" id="linkedinurl" placeholder="Enter Linkedin URL" title="Linked-in" [(ngModel)]="linkedinurl"></p>
+                <p class="rela-block caps side-header">Expertise</p>
+                <input class="personal-details" type="text" name="skill" id="skill" placeholder="Enter skills" title="skill" [(ngModel)]="skill">
+                <input type="submit" class="btn btn-success" value="Add" id="AddSkill" title="Add Skill" (click)="addSkills()">
+                <ul *ngIf="skills != null">
+                    <li class="list-thing" *ngFor="let item of skills | keyvalue; let i = index">{{ item.value }}
+                        <button (click)="removeskill(i)">x</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="rela-block content-container">
+                <div class="rela-block caps title input-style">
+                <input name="designation" id="designation" [(ngModel)]="designation" placeholder="Enter Designation">
+                </div>
+                <div class="rela-block separator"></div>
+                <div class="rela-block caps greyed">Profile</div>
+                <textarea class="rela-block justified" style="width: 100%; border: none;" placeholder="Enter your Profile details" id="Profile" name="Profile" [(ngModel)]="Profile"></textarea>
+                <div class="rela-block caps greyed">Experience</div>
+                <div >
+                <p class="light"> Start Date:  <input type="date" id="Start" name="start" style="color: gray;margin-left: 10px;" [(ngModel)]="start"></p>
+                <p class="light"> End Date:  <input type="date" id="End" name="end" style="color: gray;margin-left: 10px;" [(ngModel)]="end"></p>
+                <textarea class="rela-block justified" style="width: 100%; border: none;" placeholder="Enter your Job details here..." id="Experience" name="Experience" [(ngModel)]="Experience"></textarea>
+                <input type="submit" class="btn btn-success" value="Add Experience" id="AddExp" title="Add Experience" (click)="addExp()">
+            </div>
+                <div *ngFor="let exp of experienceArr; let i = index">
+                <p class="light"> Start Date:  <input type="date" id="Start" name="start{{i}}" style="color: gray;margin-left: 10px;" [(ngModel)]="experienceArr[i].startdate"></p>
+                <p class="light"> End Date:  <input type="date" id="End" name="end{{i}}" style="color: gray;margin-left: 10px;" [(ngModel)]="experienceArr[i].end"></p>
+                <textarea class="rela-block justified" style="width: 100%; border: none;" placeholder="Enter your Job details here..." id="Profile{{i}}" name="Profile{{i}}" [(ngModel)]="experienceArr[i].jobdescription"></textarea>
+                <button class="btn"style="color: white; width: fit-content;background-color:red"(click)="remove(i)">Remove</button>
+                <button class="btn"style="color: white; width: fit-content;background-color:orange"(click)="updateExp(i,experienceArr[i])">Update</button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="save" style="margin-top: 30px; display: flex; align-items: left;">
+            <!-- <input type="submit" class="btn btn-primary" (click)="onSubmit()" style="font-size: 20px;"> -->
+            <input type="submit" class="btn btn-primary" style="font-size: 20px;">
+        </div>
+    </form>
+</body>
+</html>

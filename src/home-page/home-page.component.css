@@ -1,0 +1,74 @@
+.top-header-resume-builder-app{
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: cornflowerblue ;
+    padding-top: 5px;
+}
+.header-image{
+    width: 100%;
+    height: 100px;
+}
+.header-image img{
+    padding-top: 10px;
+    height: 700%;
+    width: 100%;
+}
+.cvbuilder-app-explanation{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 25px;
+    display: flex;
+}
+.padding-10{
+    padding-left: 10px;
+}
+.padding-0{
+    padding-left: 0;
+    padding-right: 0;
+}
+.signup-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .signup-button i {
+    margin-right: 5px; /* Adjust margin for icon spacing */
+  }
+  .login-signup-div{
+    align-items: end;
+    padding-right: 5px;
+  }
+  .header-top-icons{
+    padding-left: 80em;
+    width: 200px;
+  }
+  .resume-builder-text{
+    font-size: 24px;
+  }
+  .buttons {
+    padding-left: 90em;
+    width: 100px;
+    margin: 0 auto;
+    display: inline;
+  }
+    
+  .action_btn {
+    width: 100px;
+    margin: 0 auto;
+    display: inline;
+    height: 35px;
+    border-radius: 2px;
+  }
+  .action_btn submit{
+  }
+  .content{
+    height: 500px;
+    background-image: url(https://img.freepik.com/free-vector/tiny-hr-manager-looking-candidate-job-interview-magnifier-computer-screen-flat-vector-illustration-career-employment_74855-8619.jpg?w=996&t=st=1705419483~exp=1705420083~hmac=ac4c606fc39eb21b4df8e917b0cc5641a8363b44b6a837bccc84d8a79c5f53d0);  
+    background-repeat: no-repeat;
+  }

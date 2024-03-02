@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Resume Builder</title>
+</head>
+<body>
+  <div class="top-header-resume-builder-app">
+    <h1>Resume Builder</h1>
+    <hr>
+  </div>
+  
+  <div class="buttons">
+    <div class="action_btn">
+    <button name="submit" class="action_btn submit btn-primary" style="margin-right: 10px;" type="submit" value="Save" (click)="openPopup()">Login</button>
+    <button name="submit" class="action_btn cancel btn-success" type="submit" value="Cancel" (click)="openSignupPopup()">Signup</button>
+    <p id="saved"></p>
+  </div>
+</div> 
+<div class="content">
+  Introducing our cutting-edge resume builder – your key to unlocking career success! Crafted with precision and designed for simplicity, our user-friendly platform empowers you to create a professional resume that stands out in today's competitive job market. With customizable templates, intuitive editing tools, and expert tips, you can showcase your skills and experiences effortlessly. Gain a competitive edge by presenting a polished, eye-catching resume that captivates employers and maximizes your chances of landing that dream job. Elevate your career journey with confidence – try our resume builder today and step into a brighter, more prosperous future!
+<hr>
+<div style="padding-left: 10px;">
+  <button class="btn btn-success" routerLink="/app-resume-content"> Get Started</button>
+<router-outlet></router-outlet>
+</div>
+</div> 
+</body>
+</html>
